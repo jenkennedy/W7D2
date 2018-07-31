@@ -217,11 +217,16 @@ var TodoList = function TodoList(_ref) {
   var todos = _ref.todos,
       receiveTodo = _ref.receiveTodo;
   return _react2.default.createElement(
-    'ul',
+    'div',
     null,
-    todos.map(function (todo) {
-      return _react2.default.createElement(_todo_list_item2.default, { key: todo.id, todo: todo });
-    })
+    _react2.default.createElement(
+      'ul',
+      null,
+      todos.map(function (todo) {
+        return _react2.default.createElement(_todo_list_item2.default, { key: todo.id, todo: todo });
+      })
+    ),
+    _react2.default.createElement(TodoForm, { receiveTodo: receiveTodo })
   );
 };
 
