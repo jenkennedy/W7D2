@@ -8,6 +8,7 @@ class TodoForm extends React.Component {
       id: uniqId(),
       title: '',
       body: '',
+      done: true, // will be set to false in reducer
     };
     this.handleInput = this.handleInput.bind(this);
     this.addTodo = this.addTodo.bind(this);
