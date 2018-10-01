@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ .main {
+   background-color: #B2EBF2;
+ }
+
+.main-todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  width: 400px;
+  margin: auto;
+
+  h1 {
+    color: #0097A7;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .todo-item {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #0097A7;
+    width: 358px;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+}

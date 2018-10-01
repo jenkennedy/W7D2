@@ -271,8 +271,18 @@ var TodoForm = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('input', { type: 'text', name: 'title', onChange: this.handleInput, value: this.state.title }),
-        _react2.default.createElement('input', { type: 'text', name: 'body', onChange: this.handleInput, value: this.state.body }),
+        _react2.default.createElement(
+          'label',
+          null,
+          'Title:',
+          _react2.default.createElement('input', { type: 'text', name: 'title', onChange: this.handleInput, value: this.state.title })
+        ),
+        _react2.default.createElement(
+          'label',
+          null,
+          'Body:',
+          _react2.default.createElement('input', { type: 'text', name: 'body', onChange: this.handleInput, value: this.state.body })
+        ),
         _react2.default.createElement(
           'button',
           { onClick: this.addTodo },
@@ -323,19 +333,28 @@ var TodoList = function TodoList(_ref) {
       removeTodo = _ref.removeTodo;
   return _react2.default.createElement(
     'div',
-    null,
+    { className: 'main' },
     _react2.default.createElement(
-      'ul',
-      null,
-      todos.map(function (todo) {
-        return _react2.default.createElement(_todo_list_item2.default, {
-          key: todo.id,
-          todo: todo,
-          receiveTodo: receiveTodo,
-          removeTodo: removeTodo });
-      })
-    ),
-    _react2.default.createElement(_todo_form2.default, { receiveTodo: receiveTodo })
+      'div',
+      { className: 'main-todo-container' },
+      _react2.default.createElement(
+        'h1',
+        { className: 'todo-list' },
+        'All the Todos'
+      ),
+      _react2.default.createElement(
+        'ul',
+        null,
+        todos.map(function (todo) {
+          return _react2.default.createElement(_todo_list_item2.default, {
+            key: todo.id,
+            todo: todo,
+            receiveTodo: receiveTodo,
+            removeTodo: removeTodo });
+        })
+      ),
+      _react2.default.createElement(_todo_form2.default, { receiveTodo: receiveTodo })
+    )
   );
 };
 
@@ -416,7 +435,7 @@ var TodoListItem = function TodoListItem(_ref) {
       removeTodo = _ref.removeTodo;
   return _react2.default.createElement(
     'li',
-    null,
+    { className: 'todo-item' },
     todo.title,
     ': ',
     todo.body,
