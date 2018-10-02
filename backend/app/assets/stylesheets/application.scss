@@ -34,15 +34,34 @@
   ul {
     list-style: none;
     padding: 0;
+
+    .todo-item {
+      background-color: white;
+      border-radius: 3px;
+      border: 1px solid #0097A7;
+      width: 358px;
+      padding: 20px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
   }
 
-  .todo-item {
-    background-color: white;
-    border-radius: 3px;
-    border: 1px solid #0097A7;
-    width: 358px;
-    padding: 20px;
-    margin: 10px 0;
-    box-sizing: border-box;
+  .todo-form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-top: 10px;
+    }
+
+    input {
+      width: 328px;
+      padding: 5px;
+      margin: 10px;
+      border-radius: 3px;
+      border: 1px solid #0097A7;
+
+    }
+
   }
 }

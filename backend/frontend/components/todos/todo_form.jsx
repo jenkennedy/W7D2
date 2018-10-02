@@ -31,15 +31,14 @@ class TodoForm extends React.Component {
 
   render () {
     return (
-      <div>
-        <label>Title:
+      <div className="todo-form">
+        <label>Title:</label>
         <input type='text' name='title' onChange={this.handleInput} value={this.state.title}></input>
-        </label>
 
-        <label>Body:
+        <label>Body:</label>
         <input type='text' name='body' onChange={this.handleInput} value={this.state.body}></input>
-        </label>
-        
+
+
         <button onClick={this.addTodo}>Add Todo!</button>
       </div>
     );

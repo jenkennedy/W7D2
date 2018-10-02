@@ -270,19 +270,19 @@ var TodoForm = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'todo-form' },
         _react2.default.createElement(
           'label',
           null,
-          'Title:',
-          _react2.default.createElement('input', { type: 'text', name: 'title', onChange: this.handleInput, value: this.state.title })
+          'Title:'
         ),
+        _react2.default.createElement('input', { type: 'text', name: 'title', onChange: this.handleInput, value: this.state.title }),
         _react2.default.createElement(
           'label',
           null,
-          'Body:',
-          _react2.default.createElement('input', { type: 'text', name: 'body', onChange: this.handleInput, value: this.state.body })
+          'Body:'
         ),
+        _react2.default.createElement('input', { type: 'text', name: 'body', onChange: this.handleInput, value: this.state.body }),
         _react2.default.createElement(
           'button',
           { onClick: this.addTodo },
